@@ -8,12 +8,17 @@ public class RayCastWeapon : MonoBehaviour {
 	public int damage = 40;
 	public GameObject impactEffect;
 	public LineRenderer lineRenderer;
+
+	// Added This
+	public float fireRate;
+	private float nextTimeToFire = 0;
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
 		{
 			StartCoroutine(Shoot());
+			nextTimeToFire = Time.time + 1 / fireRate;
 		}
 	}
 

@@ -26,13 +26,13 @@ public class PlayerMovement : MonoBehaviour {
 			animator.SetBool("IsJumping", true);
 		}
 
-		if (Input.GetButtonDown("Crouch"))
+		/*if (Input.GetButtonDown("Crouch"))
 		{
 			crouch = true;
 		} else if (Input.GetButtonUp("Crouch"))
 		{
 			crouch = false;
-		}
+		}*/
 
 	}
 
